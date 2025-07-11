@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wa Lands Commission - Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #003366;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    header h1 {
+      color: white;
+      flex-grow: 1;
+      text-align: center;
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #0059b3;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0073e6;
+    }
+
+    .switch {
+      text-align: center;
+      margin-top: 15px;
+      color: #333;
+    }
+
+    .switch a {
+      color: #0059b3;
+      text-decoration: none;
+    }
+
+    .switch a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="C:\Users\USER\Desktop\WACIS\img\afrigist.png" alt="Left Logo">
+    <h1>Wa Lands Commission Parcel Portal</h1>
+    <img src="C:\Users\USER\Desktop\WACIS\img\lands com.png" alt="Right Logo">
+  </header>
+
+  <div class="container">
+    <h2 id="form-title">Login</h2>
+    <form id="auth-form" onsubmit="handleLogin(event)">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <div class="switch">
+      <span id="toggle-text">New user? <a href="#" onclick="switchMode()">Register</a></span>
+    </div>
+  </div>
+
+  <script>
+    let isRegister = false;
+
+    function switchMode() {
+      isRegister = !isRegister;
+      document.getElementById("form-title").textContent = isRegister ? "Register" : "Login";
+      document.getElementById("toggle-text").innerHTML = isRegister
+        ? 'Already have an account? <a href="#" onclick="switchMode()">Login</a>'
+        : 'New user? <a href="#" onclick="switchMode()">Register</a>';
+    }
+
+    function handleLogin(event) {
+      event.preventDefault();
+      // Allow any username/password for demo purposes
+      window.location.href = "portal.html"; // Load the full portal interface
+    }
+  </script>
+</body>
+</html>
