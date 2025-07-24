@@ -6,14 +6,23 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f0f4f8;
       margin: 0;
       padding: 0;
+      background: url('img/headquarters.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
 
     header {
-      background-color: #003366;
-      padding: 10px;
+      background-color: rgba(0, 51, 102, 0.9);
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .header-top {
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -25,19 +34,24 @@
 
     header h1 {
       color: white;
-      flex-grow: 1;
-      text-align: center;
-      margin: 0;
       font-size: 24px;
+      margin: 10px 0 5px;
+    }
+
+    header p {
+      color: #cde0f0;
+      font-style: italic;
+      font-size: 14px;
+      margin: 0 0 10px;
     }
 
     .container {
       max-width: 400px;
-      margin: 40px auto;
+      margin: 60px auto;
       padding: 30px;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
 
     h2 {
@@ -88,9 +102,12 @@
 </head>
 <body>
   <header>
-    <img src="‪C:\Users\USER\Documents\GitHub\CIS\img\afrigist.png" alt="Left Logo">
+    <div class="header-top">
+      <img src="img/afrigist.png" alt="Afrigis Logo">
+      <img src="img/lands com.png" alt="Lands Commission Logo">
+    </div>
     <h1>Wa Lands Commission Parcel Portal</h1>
-    <img src="C:\Users\USER\Documents\GitHub\CIS\img\lands com.png" alt="Right Logo">
+    <p><em>Client satisfaction is our goal</em></p>
   </header>
 
   <div class="container">
@@ -118,8 +135,7 @@
 
     function handleLogin(event) {
       event.preventDefault();
-      // Allow any username/password for demo purposes
-      window.location.href = "portal.html"; // Load the full portal interface
+      window.location.href = "portal.html";
     }
   </script>
 </body>
